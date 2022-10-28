@@ -1,81 +1,80 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class Todo {
-//   final String title;
-//   final String description;
+void main() => runApp(const MyApp());
 
-//   const Todo(this.title, this.description);
-// }
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-// void main() {
-//   runApp(
-//     MaterialApp(
-//       title: 'Passing Data',
-//       home: TodosScreen(
-//         todos: List.generate(
-//           20,
-//           (i) => Todo(
-//             'Todo $i',
-//             'A description of what needs to be done for Todo $i',
-//           ),
-//         ),
-//       ),
-//     ),
-//   );
-// }
+  static const String _title = 'Flutter Code Sample';
 
-// class TodosScreen extends StatelessWidget {
-//   const TodosScreen({super.key, required this.todos});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: _title,
+      home: Scaffold(
+        appBar: AppBar(title: const Text(_title)),
+        body: const MyStatelessWidget(),
+      ),
+    );
+  }
+}
 
-//   final List<Todo> todos;
+class MyStatelessWidget extends StatelessWidget {
+  const MyStatelessWidget({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text('Todos'),
-//       ),
-//       body: ListView.builder(
-//         itemCount: todos.length,
-//         itemBuilder: (context, index) {
-//           return ListTile(
-//             title: Text(todos[index].title),
-//             // When a user taps the ListTile, navigate to the DetailScreen.
-//             // Notice that you're not only creating a DetailScreen, you're
-//             // also passing the current todo through to it.
-//             onTap: () {
-//               Navigator.push(
-//                 context,
-//                 MaterialPageRoute(
-//                   builder: (context) => DetailScreen(todo: todos[index]),
-//                 ),
-//               );
-//             },
-//           );
-//         },
-//       ),
-//     );
-//   }
-// }
-
-// class DetailScreen extends StatelessWidget {
-//   // In the constructor, require a Todo.
-//   const DetailScreen({super.key, required this.todo});
-
-//   // Declare a field that holds the Todo.
-//   final Todo todo;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     // Use the Todo to create the UI.
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text(todo.title),
-//       ),
-//       body: Padding(
-//         padding: const EdgeInsets.all(16.0),
-//         child: Text(todo.description),
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          TextButton(
+            style: TextButton.styleFrom(
+              textStyle: const TextStyle(fontSize: 20),
+            ),
+            onPressed: null,
+            child: const Text('Disabled'),
+          ),
+          const SizedBox(height: 30),
+          TextButton(
+            style: TextButton.styleFrom(
+              textStyle: const TextStyle(fontSize: 20),
+            ),
+            onPressed: () {},
+            child: const Text('Enabled'),
+          ),
+          const SizedBox(height: 30),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(4),
+            child: Stack(
+              children: <Widget>[
+                Positioned.fill(
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: <Color>[
+                          Color(0xFF0D47A1),
+                          Color(0xFF1976D2),
+                          Color(0xFF42A5F5),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.all(16.0),
+                    textStyle: const TextStyle(fontSize: 20),
+                  ),
+                  onPressed: () {},
+                  child: const Text('Gradient'),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
