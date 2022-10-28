@@ -12,7 +12,7 @@ class UserHome extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Text(
-          'Sami Lariz - Order',
+          'Sami Lariz - Menu',
           style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
         ),
       ),
@@ -29,11 +29,11 @@ class UserHome extends StatelessWidget {
                     onTap: () {
                       // Navigator.pushNamed(context, '/second');
                       Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DetailScreen(),
-                ),
-              );
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DetailScreen(),
+                        ),
+                      );
                     },
                     child: Padding(
                         padding: EdgeInsets.all(5.0),
@@ -113,7 +113,7 @@ class UserHome extends StatelessWidget {
           padding: EdgeInsets.only(top: 14.0),
           child: Text(
             "Menu",
-            style: TextStyle( fontWeight: FontWeight.bold, fontSize: 18.0),
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
           ),
         ),
         Card(
