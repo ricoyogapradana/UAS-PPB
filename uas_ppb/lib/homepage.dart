@@ -30,7 +30,6 @@ class _HomePageState extends State<HomePage> {
     UserHome(),
     Pesanan(),
     DetailScreen(),
-    // MyApp()
     // UserSearch(),
     // UserReels(),
     // UserShop(),
@@ -48,7 +47,7 @@ class _HomePageState extends State<HomePage> {
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Menu"),
             BottomNavigationBarItem(icon: Icon(Icons.wallet), label: "Pesanan"),
-            BottomNavigationBarItem(icon: Icon(Icons.key), label: "TEST"),
+            // BottomNavigationBarItem(icon: Icon(Icons.key), label: "TEST"),
             // BottomNavigationBarItem(icon: Icon(Icons.shopping_bag), label: "shop"),
             // BottomNavigationBarItem(icon: Icon(Icons.person), label: "account"),
           ]),
