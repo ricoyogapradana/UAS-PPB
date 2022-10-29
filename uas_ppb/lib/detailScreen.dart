@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class DetailScreen extends StatelessWidget {
   // In the constructor, require a Todo.
-  // const DetailScreen({super.key, required this.todo});
-  const DetailScreen({super.key});
-
-  // Declare a field that holds the Todo.
-  //final Todo todo;
+  final dynamic detail;
+  const DetailScreen({Key? key, this.detail}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +14,10 @@ class DetailScreen extends StatelessWidget {
         appBar: AppBar(
           elevation: 0,
           title: Text(
-            'Nama Makanan',
-            style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+            detail['nama_menu'],
+            style: TextStyle(
+                color: Color.fromARGB(255, 255, 178, 78),
+                fontWeight: FontWeight.bold),
           ),
         ),
         body: ListView(
@@ -33,8 +34,7 @@ class DetailScreen extends StatelessWidget {
                             children: [
                               Image(
                                 fit: BoxFit.fill,
-                                image: NetworkImage(
-                                    "https://pps.whatsapp.net/v/t61.24694-24/303928967_1709597169484026_8292559486742102172_n.jpg?ccb=11-4&oh=01_AdTWMq2RMYGImqlhDQlV-a0SqmDEsa83M_IpRnr7YAjigA&oe=6367D098"),
+                                image: NetworkImage(detail['img_menu']),
                               ),
                               Row(
                                 children: [
@@ -49,7 +49,7 @@ class DetailScreen extends StatelessWidget {
                                 ],
                               ),
                               Text(
-                                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                                detail['deskripsi_menu'],
                                 style: TextStyle(
                                     fontSize: 15.0,
                                     color: Colors.grey,
@@ -64,7 +64,7 @@ class DetailScreen extends StatelessWidget {
                                     Column(
                                       children: [
                                         Text(
-                                          'Rp. 20.000',
+                                          detail['harga_menu'],
                                           style: TextStyle(
                                               fontSize: 20.0,
                                               fontWeight: FontWeight.bold),

@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           appBarTheme: AppBarTheme(
               color: Colors.transparent,
-              iconTheme: IconThemeData(color: Colors.red)),
+              iconTheme:
+                  IconThemeData(color: Color.fromARGB(255, 255, 178, 78))),
           primarySwatch: Colors.red),
     );
   }
