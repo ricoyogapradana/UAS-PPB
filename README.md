@@ -1,4 +1,2 @@
 # UAS-PPB
-gk ush sk ask
-Kenapa sih bang
-Yo Ndak Tau Kok Tanya Saya
+Note : Karena pakai asset eror, ane pakai Network image di laucher.page
