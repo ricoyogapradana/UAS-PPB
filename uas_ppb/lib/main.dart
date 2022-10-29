@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'homepage.dart';
+
+import 'launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'UAS - PPB',
-      home: HomePage(),
+      home: LauncherPage(),
       theme: ThemeData(
           appBarTheme: AppBarTheme(
               color: Colors.transparent,
