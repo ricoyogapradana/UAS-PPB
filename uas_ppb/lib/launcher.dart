@@ -34,7 +34,7 @@ class _LauncherPageState extends State<LauncherPage> {
           borderRadius: BorderRadius.all(Radius.circular(5)),
           boxShadow: <BoxShadow>[
             BoxShadow(
-                color: Color.fromARGB(255, 250, 242, 213),
+                color: Color.fromARGB(255, 226, 226, 226),
                 offset: Offset(2, 4),
                 blurRadius: 5,
                 spreadRadius: 2)
@@ -54,10 +54,9 @@ class _LauncherPageState extends State<LauncherPage> {
           children: <Widget>[
             new Center(
                 child: new Image(
-              image: NetworkImage(
-                  "https://i.postimg.cc/tJCZB1qL/fast-food-Copy.png"),
-              width: 100.0,
-              height: 100.0,
+              image: NetworkImage("https://i.postimg.cc/SR7J8j3m/Untitled.png"),
+              width: 300.0,
+              height: 300.0,
             )
 
                 // child: new Image.asset(
@@ -66,10 +65,6 @@ class _LauncherPageState extends State<LauncherPage> {
                 //   width: 100.0,
                 // ),
                 ),
-            new Text(
-              "Mood Food",
-              style: new TextStyle(fontFamily: 'serif', fontSize: 20.0),
-            )
           ],
         ),
       ),
