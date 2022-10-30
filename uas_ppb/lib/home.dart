@@ -241,40 +241,61 @@ class _MyAppState extends State<UserHome> {
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
-                                ListTile(
-                                  leading: Image(
-                                    image: NetworkImage(
-                                        snapshot.data[index]['img_menu']),
-                                    width: 100.0,
-                                    height: 100.0,
-                                  ),
-                                  contentPadding: EdgeInsets.all(5.0),
-                                  title:
-                                      Text(snapshot.data[index]['nama_menu']),
-                                  subtitle: Text(snapshot.data[index]
-                                          ['deskripsi_menu'] +
-                                      '\n\n' +
-                                      snapshot.data[index]['harga_menu']),
+                                Column(
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.all(15.0),
+                                      child: ListTile(
+                                        leading: Image(
+                                          image: NetworkImage(
+                                              snapshot.data[index]['img_menu']),
+                                          width: 100.0,
+                                          height: 100.0,
+                                        ),
+                                        contentPadding: EdgeInsets.all(5.0),
+                                        title: Text(
+                                          snapshot.data[index]['nama_menu'],
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        subtitle: Text(
+                                          snapshot.data[index]
+                                              ['deskripsi_menu'],
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: <Widget>[
                                     Padding(
-                                      padding: EdgeInsets.all(10.0),
+                                      padding: EdgeInsets.all(15.0),
+                                      child: Text(
+                                        snapshot.data[index]['harga_menu'],
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w200),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.all(15.0),
                                       child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(50),
                                         child: Stack(
                                           children: <Widget>[
                                             Positioned.fill(
                                               child: Container(
-                                                decoration: const BoxDecoration(
-                                                  color: Colors.red,
-                                                ),
+                                                decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            50),
+                                                    border: Border.all(
+                                                        color: Colors.red)),
                                               ),
                                             ),
                                             TextButton(
                                               style: TextButton.styleFrom(
-                                                foregroundColor: Colors.white,
+                                                foregroundColor: Colors.red,
                                                 padding:
                                                     const EdgeInsets.all(16.0),
                                                 textStyle: const TextStyle(

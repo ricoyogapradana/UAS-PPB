@@ -67,49 +67,55 @@ class DetailScreen extends StatelessWidget {
                                           detail['harga_menu'],
                                           style: TextStyle(
                                               fontSize: 20.0,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              color: Color.fromARGB(
+                                                  255, 255, 178, 78)),
                                         ),
                                       ],
                                     )
                                   ],
                                 ),
                               ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(50),
-                                    child: Stack(
-                                      children: <Widget>[
-                                        Positioned.fill(
-                                          child: Container(
-                                            decoration: const BoxDecoration(
-                                              // gradient: LinearGradient(
-                                              //   colors: <Color>[
-                                              //     Color(0xFF0D47A1),
-                                              //     Color(0xFF1976D2),
-                                              //     Color(0xFF42A5F5),
-                                              //   ],
-                                              // ),
-                                              color: Colors.red,
+                              Padding(
+                                padding:
+                                    EdgeInsets.only(bottom: 20.0, top: 20.0),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    Expanded(
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(50),
+                                        child: Stack(
+                                          children: <Widget>[
+                                            Positioned.fill(
+                                              child: Container(
+                                                decoration: const BoxDecoration(
+                                                  color: Colors.red,
+                                                ),
+                                              ),
                                             ),
-                                          ),
+                                            TextButton(
+                                                style: TextButton.styleFrom(
+                                                  foregroundColor: Colors.white,
+                                                  padding: EdgeInsets.all(16.0),
+                                                  textStyle: TextStyle(
+                                                    fontSize: 17,
+                                                  ),
+                                                ),
+                                                onPressed: () {},
+                                                child: Align(
+                                                  alignment: Alignment.center,
+                                                  child: Text(
+                                                    'Add to Cart',
+                                                  ),
+                                                )),
+                                          ],
                                         ),
-                                        TextButton(
-                                          style: TextButton.styleFrom(
-                                            foregroundColor: Colors.white,
-                                            padding: const EdgeInsets.all(16.0),
-                                            textStyle:
-                                                const TextStyle(fontSize: 17),
-                                          ),
-                                          onPressed: () {},
-                                          child: const Text('Add to Cart'),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
+                                      ),
+                                    )
+                                  ],
+                                ),
                               )
                             ],
                           )),
