@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
+import './pesanan.dart';
 import 'detailScreen.dart';
 
 // Future<http.Response> fetchMenu() {
@@ -170,8 +170,18 @@ class _MyAppState extends State<UserHome> {
                                                                           fontSize:
                                                                               14),
                                                                 ),
-                                                                onPressed:
-                                                                    () {},
+                                                                onPressed: () {
+                                                                  Navigator.of(
+                                                                          context)
+                                                                      .push(
+                                                                    MaterialPageRoute(
+                                                                      builder:
+                                                                          (context) {
+                                                                        return Pesanan();
+                                                                      },
+                                                                    ),
+                                                                  );
+                                                                },
                                                                 child:
                                                                     const Text(
                                                                         'Add'),
@@ -301,7 +311,15 @@ class _MyAppState extends State<UserHome> {
                                                 textStyle: const TextStyle(
                                                     fontSize: 14),
                                               ),
-                                              onPressed: () {},
+                                              onPressed: () {
+                                                Navigator.of(context).push(
+                                                  MaterialPageRoute(
+                                                    builder: (context) {
+                                                      return Pesanan();
+                                                    },
+                                                  ),
+                                                );
+                                              },
                                               child: const Text('Add'),
                                             ),
                                           ],

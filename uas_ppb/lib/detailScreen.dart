@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import './pesanan.dart';
 
 class DetailScreen extends StatelessWidget {
   // In the constructor, require a Todo.
@@ -103,7 +104,15 @@ class DetailScreen extends StatelessWidget {
                                                     fontSize: 17,
                                                   ),
                                                 ),
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  Navigator.of(context).push(
+                                                    MaterialPageRoute(
+                                                      builder: (context) {
+                                                        return Pesanan();
+                                                      },
+                                                    ),
+                                                  );
+                                                },
                                                 child: Align(
                                                   alignment: Alignment.center,
                                                   child: Text(
