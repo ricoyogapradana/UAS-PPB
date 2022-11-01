@@ -14,7 +14,7 @@ class Pesanan extends StatelessWidget {
             children: [
               //Image.network('https://i.ibb.co/QHMWhfz/Instagram-logo-svg.png', width: 150.0,),
               Text(
-                'Sami Lariz - List of Order',
+                'Mood Food - List of Order',
                 style: TextStyle(
                     color: Color.fromARGB(255, 255, 178, 78),
                     fontWeight: FontWeight.bold),

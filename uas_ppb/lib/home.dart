@@ -56,7 +56,7 @@ class _MyAppState extends State<UserHome> {
           backgroundColor: Colors.transparent,
           elevation: 0,
           title: Text(
-            'Sami Lariz - Menu',
+            'Mood Food - Menu',
             style: TextStyle(
                 color: Color.fromARGB(255, 255, 178, 78),
                 fontWeight: FontWeight.bold),
