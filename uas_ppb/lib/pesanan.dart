@@ -47,8 +47,9 @@ class Pesanan extends StatelessWidget {
                       Container(
                         child: Row(
                           children: [
-                            IconButton(onPressed: () {}, icon: Icon(Icons.add)),
-                            Text('data'),
+                            IconButton(
+                                onPressed: () {}, icon: Icon(Icons.remove)),
+                            Text('1'),
                             IconButton(onPressed: () {}, icon: Icon(Icons.add)),
                           ],
                         ),
@@ -76,7 +77,7 @@ class Pesanan extends StatelessWidget {
                   Expanded(
                     flex: 4,
                     child: Text(
-                      '4 Items',
+                      '1 Items',
                       textAlign: TextAlign.center,
                       style: TextStyle(),
                     ),
@@ -84,7 +85,7 @@ class Pesanan extends StatelessWidget {
                   Expanded(
                     flex: 4,
                     child: Text(
-                      'Rp 1,429,000',
+                      pesan['harga_menu'],
                       textAlign: TextAlign.end,
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
