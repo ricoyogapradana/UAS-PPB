@@ -1,11 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'dart:math';
 
-class Pesanan extends StatelessWidget {
+class Pesanan extends StatefulWidget {
   //Pesanan({super.key});
-  final dynamic pesan;
   const Pesanan({Key? key, this.pesan}) : super(key: key);
+  final dynamic pesan;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<Pesanan> {
+  int _counter = 1;
+  //String resultkali = '';
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  void _disincrementCounter() {
+    setState(() {
+      _counter--;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +55,12 @@ class Pesanan extends StatelessWidget {
                 children: <Widget>[
                   ListTile(
                     leading: Image(
-                      image: NetworkImage(pesan['img_menu']),
+                      image: NetworkImage(widget.pesan['img_menu']),
                       width: 100.0,
                       height: 100.0,
                     ),
-                    title: Text(pesan['nama_menu']),
-                    subtitle: Text(pesan['harga_menu']),
+                    title: Text(widget.pesan['nama_menu']),
+                    subtitle: Text(widget.pesan['harga_menu']),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -48,9 +69,12 @@ class Pesanan extends StatelessWidget {
                         child: Row(
                           children: [
                             IconButton(
-                                onPressed: () {}, icon: Icon(Icons.remove)),
-                            Text('1'),
-                            IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+                                onPressed: _disincrementCounter,
+                                icon: Icon(Icons.remove)),
+                            Text('$_counter'),
+                            IconButton(
+                                onPressed: _incrementCounter,
+                                icon: Icon(Icons.add)),
                           ],
                         ),
                       ),
@@ -77,7 +101,7 @@ class Pesanan extends StatelessWidget {
                   Expanded(
                     flex: 4,
                     child: Text(
-                      '1 Items',
+                      '$_counter Items',
                       textAlign: TextAlign.center,
                       style: TextStyle(),
                     ),
@@ -85,7 +109,7 @@ class Pesanan extends StatelessWidget {
                   Expanded(
                     flex: 4,
                     child: Text(
-                      pesan['harga_menu'],
+                      widget.pesan['harga_menu'],
                       textAlign: TextAlign.end,
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
