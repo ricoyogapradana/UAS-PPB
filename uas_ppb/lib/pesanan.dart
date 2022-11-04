@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class Pesanan extends StatelessWidget {
-  Pesanan({super.key});
+  //Pesanan({super.key});
+  final dynamic pesan;
+  const Pesanan({Key? key, this.pesan}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +26,6 @@ class Pesanan extends StatelessWidget {
             ],
           )),
       body: ListView(padding: EdgeInsets.all(20.0), children: <Widget>[
-        // Row(
-        //   children: [
-        //     Text('Pesanan'),
-        //   ],
-        // ),
         Column(
           children: [
             Card(
@@ -35,20 +34,24 @@ class Pesanan extends StatelessWidget {
                 children: <Widget>[
                   ListTile(
                     leading: Image(
-                      image: NetworkImage(
-                          "https://i.postimg.cc/V6MSWj3x/karedok.jpg"),
+                      image: NetworkImage(pesan['img_menu']),
                       width: 100.0,
                       height: 100.0,
                     ),
-                    title: Text('Karedok'),
-                    subtitle: Text('\n\nRp. 25.000'),
+                    title: Text(pesan['nama_menu']),
+                    subtitle: Text(pesan['harga_menu']),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
-                      TextButton(
-                        child: Text('ADD'),
-                        onPressed: () {/* ... */},
+                      Container(
+                        child: Row(
+                          children: [
+                            IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+                            Text('data'),
+                            IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+                          ],
+                        ),
                       ),
                       const SizedBox(width: 8),
                     ],
@@ -56,108 +59,8 @@ class Pesanan extends StatelessWidget {
                 ],
               ),
             ),
-            Card(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  ListTile(
-                    leading: Image(
-                      image: NetworkImage(
-                          "https://i.postimg.cc/50fXNqWm/Ayam-taliwang.jpg"),
-                      width: 100.0,
-                      height: 100.0,
-                    ),
-                    title: Text('Ayam Taliwang'),
-                    subtitle: Text('\n\nRp. 45.000'),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      TextButton(
-                        child: Text('ADD'),
-                        onPressed: () {/* ... */},
-                      ),
-                      const SizedBox(width: 8),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            Card(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  ListTile(
-                    leading: Image(
-                      image: NetworkImage(
-                          "https://i.postimg.cc/Qdk007rW/mie-aceh.jpg"),
-                      width: 100.0,
-                      height: 100.0,
-                    ),
-                    title: Text('Mie Aceh'),
-                    subtitle: Text('\n\nRp. 15.000'),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      TextButton(
-                        child: Text('ADD'),
-                        onPressed: () {/* ... */},
-                      ),
-                      const SizedBox(width: 8),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            // Card(
-            //   child: Row(
-            //     children: <Widget>[
-            //       Image(
-            //         image: NetworkImage(
-            //             "https://i.postimg.cc/SR7J8j3m/Untitled.png"),
-            //         width: 100.0,
-            //         height: 100.0,
-            //       ),
-            //       Column(
-            //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //         children: [
-            //           Container(
-            //             padding: EdgeInsets.all(45.0),
-            //             child: Column(
-            //               children: [
-            //                 Text(
-            //                   "Ayam Taliwang",
-            //                   style: TextStyle(
-            //                       fontSize: 15.0, fontWeight: FontWeight.bold),
-            //                 ),
-            //                 Text(
-            //                   "Rp.45.000",
-            //                   style: TextStyle(
-            //                       fontSize: 12.0, fontWeight: FontWeight.bold),
-            //                 )
-            //               ],
-            //             ),
-            //           )
-            //         ],
-            //       ),
-            //       Row(
-            //         mainAxisAlignment: MainAxisAlignment.start,
-            //         children: <Widget>[
-            //           Container(
-            //               width: 70.0,
-            //               height: 20.0,
-            //               decoration: BoxDecoration(
-            //                   border: Border.all(color: Colors.black)),
-            //               child: Row(
-            //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //               ))
-            //         ],
-            //       ),
-            //     ],
-            //   ),
-            // ),
             Container(
+              padding: EdgeInsets.only(top: 13.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import './pesanan.dart';
+import 'pesanan.dart';
 import 'detailScreen.dart';
 
 // Future<http.Response> fetchMenu() {
@@ -177,7 +177,9 @@ class _MyAppState extends State<UserHome> {
                                                                     MaterialPageRoute(
                                                                       builder:
                                                                           (context) {
-                                                                        return Pesanan();
+                                                                        return Pesanan(
+                                                                            pesan:
+                                                                                snapshot.data[index]);
                                                                       },
                                                                     ),
                                                                   );
@@ -315,7 +317,9 @@ class _MyAppState extends State<UserHome> {
                                                 Navigator.of(context).push(
                                                   MaterialPageRoute(
                                                     builder: (context) {
-                                                      return Pesanan();
+                                                      return Pesanan(
+                                                          pesan: snapshot
+                                                              .data[index]);
                                                     },
                                                   ),
                                                 );

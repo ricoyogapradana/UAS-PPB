@@ -1,7 +1,9 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import './pesanan.dart';
+import 'pesanan.dart';
 
 class DetailScreen extends StatelessWidget {
   // In the constructor, require a Todo.
@@ -108,7 +110,8 @@ class DetailScreen extends StatelessWidget {
                                                   Navigator.of(context).push(
                                                     MaterialPageRoute(
                                                       builder: (context) {
-                                                        return Pesanan();
+                                                        return Pesanan(
+                                                            pesan: detail);
                                                       },
                                                     ),
                                                   );
