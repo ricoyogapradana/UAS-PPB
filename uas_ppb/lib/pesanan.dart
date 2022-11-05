@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:math';
+import './payment.dart';
 
 class Pesanan extends StatefulWidget {
   //Pesanan({super.key});
@@ -48,6 +49,7 @@ class _MyHomePageState extends State<Pesanan> {
           )),
       body: ListView(padding: EdgeInsets.all(20.0), children: <Widget>[
         Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Card(
               child: Column(
@@ -87,7 +89,7 @@ class _MyHomePageState extends State<Pesanan> {
             Container(
               padding: EdgeInsets.only(top: 13.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Expanded(
                     flex: 4,
@@ -119,6 +121,19 @@ class _MyHomePageState extends State<Pesanan> {
                 ],
               ),
             ),
+            Container(
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => Payment()));
+                  },
+                  child: Text('Order'),
+                )
+              ],
+            ))
           ],
         )
       ]),
