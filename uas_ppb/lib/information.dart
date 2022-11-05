@@ -46,7 +46,7 @@ class Information extends StatelessWidget {
                     height: 100.0,
                   ),
                   title: Text("Number : 10"),
-                  subtitle: Text("Note : - "),
+                  subtitle: Text("Note : Mie Bangka Pedas "),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
