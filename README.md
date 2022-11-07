@@ -2,7 +2,7 @@
 Aplikasi ini dibuat menggunakan flutter bahasa pemrograman dart, yang mana aplikasi ini dibuat untuk memenuhi UAS Pemrograman Perangkat Bergerak, SI20A1 tahun ajaran 2022/2023.
 Dibuat dan dirancang oleh:
   - Alfisal Punjung Kurniawan (200101003)
-  - Maruf Nur Muhammad (20101016)
+  - Maruf Nur Muhammad (200101016)
   - Rico Yoga Pradana (200101023)
 ## Deskripsi Aplikasi
 Aplikasi Mega Food adalah aplikasi pemesanan di restoran secara langsung, dalam penggunaan aplikasi akan langsung digunakan saat pelanggan masuk dan ingin memesan makanan di restoran tersebut seperti restoran di Negara Jepang. Aplikasi ini akan mengefektifitas dalam proses berjalannya pemesanan karena mengurangi kejadian seperti antrian pesanan yang urut dan lupa akan pesanan yang sudah ditulis oleh pelanggan.
