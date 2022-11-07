@@ -18,7 +18,7 @@ class _Payment extends State<Payment> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Text(
-          'Mood Food - Paymnet',
+          'Mega Food - Pembayaran',
           style: TextStyle(
               color: Color.fromARGB(255, 255, 178, 78),
               fontWeight: FontWeight.bold),

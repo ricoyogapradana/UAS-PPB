@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Menu"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.wallet), label: "Information"),
+                icon: Icon(Icons.mail_outline), label: "Informasi"),
             // BottomNavigationBarItem(icon: Icon(Icons.key), label: "TEST"),
             // BottomNavigationBarItem(icon: Icon(Icons.shopping_bag), label: "shop"),
             // BottomNavigationBarItem(icon: Icon(Icons.person), label: "account"),

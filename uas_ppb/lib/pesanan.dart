@@ -40,7 +40,7 @@ class _MyHomePageState extends State<Pesanan> {
             children: [
               //Image.network('https://i.ibb.co/QHMWhfz/Instagram-logo-svg.png', width: 150.0,),
               Text(
-                'Mood Food - List of Order',
+                'Mega Food - Pesanan',
                 style: TextStyle(
                     color: Color.fromARGB(255, 255, 178, 78),
                     fontWeight: FontWeight.bold),
@@ -94,7 +94,7 @@ class _MyHomePageState extends State<Pesanan> {
                   Expanded(
                     flex: 4,
                     child: Text(
-                      'Subtotal',
+                      'Total',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                       ),
@@ -103,7 +103,7 @@ class _MyHomePageState extends State<Pesanan> {
                   Expanded(
                     flex: 4,
                     child: Text(
-                      '$_counter Items',
+                      '$_counter Item',
                       textAlign: TextAlign.center,
                       style: TextStyle(),
                     ),
@@ -111,7 +111,7 @@ class _MyHomePageState extends State<Pesanan> {
                   Expanded(
                     flex: 4,
                     child: Text(
-                      widget.pesan['harga_menu'],
+                      'Rp. ' + widget.pesan['harga_menu'],
                       textAlign: TextAlign.end,
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
@@ -131,7 +131,7 @@ class _MyHomePageState extends State<Pesanan> {
                       Navigator.of(context).push(
                           MaterialPageRoute(builder: (context) => Payment()));
                     },
-                    child: Text('Order'),
+                    child: Text('Pesan'),
                   )
                 ],
               ),

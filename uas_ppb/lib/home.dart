@@ -56,7 +56,7 @@ class _MyAppState extends State<UserHome> {
           backgroundColor: Colors.transparent,
           elevation: 0,
           title: Text(
-            'Mood Food - Menu',
+            'Mega Food - Menu',
             style: TextStyle(
                 color: Color.fromARGB(255, 255, 178, 78),
                 fontWeight: FontWeight.bold),
@@ -67,7 +67,7 @@ class _MyAppState extends State<UserHome> {
           child: ListView(
             children: [
               Text(
-                "Bestsellers",
+                "Menu Populer",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 255, 178, 78),
@@ -126,8 +126,9 @@ class _MyAppState extends State<UserHome> {
                                                             FontWeight.bold),
                                                   ),
                                                   Text(
-                                                    snapshot.data[index]
-                                                        ['harga_menu'],
+                                                    'Rp. ' +
+                                                        snapshot.data[index]
+                                                            ['harga_menu'],
                                                     style: TextStyle(
                                                         fontSize: 15.0),
                                                   ),
@@ -184,9 +185,8 @@ class _MyAppState extends State<UserHome> {
                                                                     ),
                                                                   );
                                                                 },
-                                                                child:
-                                                                    const Text(
-                                                                        'Add'),
+                                                                child: const Text(
+                                                                    'Tambah'),
                                                               ),
                                                             ],
                                                           ),
@@ -285,7 +285,8 @@ class _MyAppState extends State<UserHome> {
                                     Padding(
                                       padding: EdgeInsets.all(15.0),
                                       child: Text(
-                                        snapshot.data[index]['harga_menu'],
+                                        'Rp. ' +
+                                            snapshot.data[index]['harga_menu'],
                                         style: TextStyle(
                                             fontWeight: FontWeight.w200),
                                       ),
@@ -324,7 +325,7 @@ class _MyAppState extends State<UserHome> {
                                                   ),
                                                 );
                                               },
-                                              child: const Text('Add'),
+                                              child: const Text('Tambah'),
                                             ),
                                           ],
                                         ),

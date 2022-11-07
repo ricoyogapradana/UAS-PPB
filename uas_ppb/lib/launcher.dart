@@ -34,7 +34,7 @@ class _LauncherPageState extends State<LauncherPage> {
           borderRadius: BorderRadius.all(Radius.circular(5)),
           boxShadow: <BoxShadow>[
             BoxShadow(
-                color: Color.fromARGB(255, 226, 226, 226),
+                color: Color.fromARGB(255, 243, 243, 243),
                 offset: Offset(2, 4),
                 blurRadius: 5,
                 spreadRadius: 2)

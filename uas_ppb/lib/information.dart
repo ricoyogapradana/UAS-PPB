@@ -12,7 +12,7 @@ class Information extends StatelessWidget {
         appBar: AppBar(
           elevation: 0,
           title: Text(
-            'Information',
+            'Mega Food - Informasi Pemesanan',
             style: TextStyle(
                 color: Color.fromARGB(255, 255, 178, 78),
                 fontWeight: FontWeight.bold),
@@ -28,7 +28,7 @@ class Information extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Text(
-                    'Order Queue',
+                    'Antrian Pesanan',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
@@ -45,8 +45,8 @@ class Information extends StatelessWidget {
                     width: 100.0,
                     height: 100.0,
                   ),
-                  title: Text("Number : 10"),
-                  subtitle: Text("Note : Mie Bangka Pedas "),
+                  title: Text("Nomor : 10"),
+                  subtitle: Text("Catatan : Mie Bangka Pedas "),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -55,7 +55,7 @@ class Information extends StatelessWidget {
                       child: Row(
                         children: [
                           Text(
-                            "Status : Is being made",
+                            "Status : Sedang dibuat",
                             style: TextStyle(fontStyle: FontStyle.italic),
                           )
                         ],
@@ -77,8 +77,8 @@ class Information extends StatelessWidget {
                     width: 100.0,
                     height: 100.0,
                   ),
-                  title: Text("Number : 11"),
-                  subtitle: Text("Note : - "),
+                  title: Text("Nomor : 11"),
+                  subtitle: Text("Catatan : - "),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -87,7 +87,7 @@ class Information extends StatelessWidget {
                       child: Row(
                         children: [
                           Text(
-                            "Status : In Queue",
+                            "Status : Dalam antrian",
                             style: TextStyle(fontStyle: FontStyle.italic),
                           )
                         ],
@@ -109,8 +109,8 @@ class Information extends StatelessWidget {
                     width: 100.0,
                     height: 100.0,
                   ),
-                  title: Text("Number : 12"),
-                  subtitle: Text("Note : - "),
+                  title: Text("Nomor : 12"),
+                  subtitle: Text("Catatan : - "),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -119,7 +119,7 @@ class Information extends StatelessWidget {
                       child: Row(
                         children: [
                           Text(
-                            "Status : In Queue",
+                            "Status : Dalam antrian",
                             style: TextStyle(fontStyle: FontStyle.italic),
                           )
                         ],

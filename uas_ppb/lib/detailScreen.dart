@@ -44,7 +44,7 @@ class DetailScreen extends StatelessWidget {
                                   Padding(
                                     padding: EdgeInsets.only(
                                         bottom: 15.0, top: 15.0),
-                                    child: Text('Description:',
+                                    child: Text('Deskripsi:',
                                         style: TextStyle(
                                             fontSize: 15.0,
                                             fontWeight: FontWeight.bold)),
@@ -67,7 +67,7 @@ class DetailScreen extends StatelessWidget {
                                     Column(
                                       children: [
                                         Text(
-                                          detail['harga_menu'],
+                                          'Rp. ' + detail['harga_menu'],
                                           style: TextStyle(
                                               fontSize: 20.0,
                                               fontWeight: FontWeight.bold,
@@ -119,7 +119,7 @@ class DetailScreen extends StatelessWidget {
                                                 child: Align(
                                                   alignment: Alignment.center,
                                                   child: Text(
-                                                    'Add to Cart',
+                                                    'Tambah',
                                                   ),
                                                 )),
                                           ],
