@@ -122,18 +122,20 @@ class _MyHomePageState extends State<Pesanan> {
               ),
             ),
             Container(
-                child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => Payment()));
-                  },
-                  child: Text('Order'),
-                )
-              ],
-            ))
+              padding: EdgeInsets.only(top: 25.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Payment()));
+                    },
+                    child: Text('Order'),
+                  )
+                ],
+              ),
+            )
           ],
         )
       ]),
