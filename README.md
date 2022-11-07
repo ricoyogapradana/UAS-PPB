@@ -33,5 +33,5 @@ Splash Screen : tampilan awal pada saat aplikasi dibuka
   - Dan mesin print kecil akan print nomor antrian dan list menu yang dipesan.
   - Pelanggan menunggu hingga pesanan datang dan dapat melakukan pembayaran ketika pesanan telah diantarkan ke meja pelanggan.
 ## Link
-Youtube : https://www.youtube.com/watch?v=R_xMiVm-KsA
-Github  : https://github.com/ricoyogapradana/UAS-PPB
+-Youtube : https://www.youtube.com/watch?v=R_xMiVm-KsA
+-Github  : https://github.com/ricoyogapradana/UAS-PPB
